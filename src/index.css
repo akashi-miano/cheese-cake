@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	@apply scroll-smooth;
+}
+
+ul {
+	list-style: none;
+
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav li.selected a{
+	@apply !text-inherit;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+    background: url("./assets/mainBg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inika', serif;
+	overflow-x: hidden;
+    @apply text-textClr;
+}
+
+.grid{
+	display: grid;
+}
+
+.grid--1x2 {
+	grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.grid--1x3 {
+	grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.btn {
+	display: inline-block;
+	padding: .5em 1.5em;
+	font-size: 1.125rem;
+	font-weight: 700;
+	transition: 250ms;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}
+
+.flow-content--s > * + *  {
+	margin-top: .5rem !important;
+}
+.flow-content--m > * + *  {
+	margin-top: 1rem !important;
+}
+.flow-content--xm > * + *  {
+	margin-top: 1.5rem !important;
+}
+.flow-content--l > * + *  {
+	margin-top: 3rem !important;
+}
+.flow-content--xl > * + *  {
+	margin-top: 3.5rem !important;
+}
+
+.active{
+    @apply bg-white text-primary;
+}
+
+
+  .btn--primary {
+    @apply btn border-2  bg-primary rounded-full  text-white hover:text-white hover:bg-black;
+  } 
+
+  .btn--secondary{
+    @apply btn border-2  bg-none border-primary rounded-full text-primary hover:bg-primary hover:text-white;
+  } 
+
+  .card-shadow{
+	box-shadow: 2px 9px 42px 0px rgba(77, 66, 44, 0.5);
+
+box-shadow: -2px -9px 42px 0px rgba(77, 66, 44, 0.5);
+
+  }
+
+  .card{
+	@apply  duration-300 hover:scale-105  md:hover:rotate-3;
+  }
+
+  .time{
+	font-family: 'Outfit', sans-serif;;
+  }
+
+  .title__description{
+	font-family: 'Roboto', sans-serif;
+  }
+
+  .poppins{
+	    font-family: 'Poppins', sans-serif;
+  }
+
+  .btn--accent{
+	@apply text-[rgba(0,0,0,.8)] bg-[#FCAE36] px-8 py-2 rounded-full w-full hover:text-white hover:bg-cyan-600;
+  }
+
+  textarea{
+	resize: none;
+	min-height: 250px;
+	max-height: 350px;
+  }
+
+  .textarea-shadows{
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.34);
+  }
+
+  .input-shadows{
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.26);
+  }
+
+@media screen and (max-width: 34.375em)  {
+  html {
+    font-size: 65%;
+  }
+}
+
+.selected{
+	@apply bg-white rounded-l-md px-4 py-2;
+}
